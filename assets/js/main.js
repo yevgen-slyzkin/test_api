@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var ajaxUrl = 'ajax.php',
-        tBody = document.getElementById('main-table');
+        tBody = $('#main-table');
     $.ajax({
         dataType: "json",
         type: "POST",
@@ -18,7 +18,7 @@ $(document).ready(function(){
             }
         },
         error: function(result) {
-            $table.remove();
+            tBody.remove();
             $('body').append('<h1>Error</h1>')
         }
     });
